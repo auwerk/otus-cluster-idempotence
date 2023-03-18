@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: otus-order
+  name: otus-service-order
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: arch.homework
+      http:
+        paths:
+          - backend:
+              service:
+                name: otus-service-order
+                port:
+                  name: http
+            pathType: Exact
+            path: /api/order(/|$)(.*)
