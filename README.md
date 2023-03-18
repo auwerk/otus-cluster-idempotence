@@ -1,5 +1,8 @@
 # ДЗ: идемпотентность API
 
+## Сервисы
+[otus-service-order](https://github.com/auwerk/otus-service-order)
+
 ## Настройка /etc/hosts
 
 Добавить записи:
